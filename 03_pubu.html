@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="referrer" content="no-referrer">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+  <!--
+    结构布局
+  -->
+
+  <div class="header">
+    网页头部内容
+  </div>
+
+  <!--
+    一个大盒子里面 四个 ul 并列
+      + 每一个 ul 的高度都是由内容撑开的
+      + 将来请求回来数据以后, 按照 ul 的高度进行填充
+      + 把每一个 li 填充到最短的 ul 里面
+  -->
+  <div class="content">
+    <ul>
+      <!-- <li>
+        <div class="top">
+          <img src="https://c-ssl.duitang.com/uploads/item/202001/04/20200104091530_pfglv.thumb.400_0.jpg" alt="">
+        </div>
+        <div class="bottom">
+          <div class="desc">描述信息</div>
+          <div class="info">
+            <i></i>
+            <span>5</span>
+            <i></i>
+            <span>12</span>
+          </div>
+          <div class="userInfo">
+            <div class="left">
+              <p>
+                <img src="https://c-ssl.duitang.com/uploads/people/201404/27/20140427231344_S8sVX.thumb.100_100_c.jpeg" alt="">
+              </p>
+            </div>
+            <div class="right">
+              人名
+            </div>
+          </div>
+        </div>
+      </li> -->
+    </ul>
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+  </div>
+
+  <script src="../ajax.js"></script>
+  <script src="./index.js"></script>
+  <script>
+    console.log('nnn')
+    /*
+      瀑布流
+        + https://www.duitang.com/napi/blog/list/by_filter_id/?
+        include_fields=top_comments%2Cis_root%2Csource_link%2Citem%2Cbuyable%2Croot_id%2Cstatus%2Clike_count%2Csender%2Calbum%2Creply_count&
+        filter_id=美食菜谱&
+        start=24&   // 开始索引, 因为一次返回 24 条数据, 每次把开始索引传递过去
+        _=1605836626673   时间戳
+        1. 配置代理, 拿到数据
+    */
+
+    // ajax({
+    //   url: '/dt',
+    //   data: 'include_fields=top_comments%2Cis_root%2Csource_link%2Citem%2Cbuyable%2Croot_id%2Cstatus%2Clike_count%2Csender%2Calbum%2Creply_count&filter_id=%E7%BE%8E%E9%A3%9F%E8%8F%9C%E8%B0%B1&start=24&_=1605836626673',
+    //   success (res) {
+    //     res = JSON.parse(res)
+    //     console.log(res)
+    //   }
+    // })
+
+
+  </script>
+</body>
+</html>
